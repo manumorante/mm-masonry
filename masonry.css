@@ -1,0 +1,32 @@
+.masonry {
+  --max-w: 800px;
+  --gap: 16;
+  --row: 20;
+  --gap-px: calc(var(--gap) * 1px);
+  --col: calc(var(--max-w) / 3);
+  --row-px: calc(var(--row) * 1px);
+
+  display: grid;
+  max-width: var(--max-w);
+  margin: 0 auto;
+
+  gap: var(--gap-px);
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc(var(--col) - var(--gap-px)), 1fr)
+  );
+  grid-auto-rows: var(--row-px);
+}
+
+.masonry__item {
+  --row-end: calc(var(--h) / (var(--row) + var(--gap)));
+  grid-row-end: span var(--row-end, 1);
+  overflow: hidden;
+  box-shadow: 0 0 4px 0 #e0e0e0;
+}
+
+.masonry__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
