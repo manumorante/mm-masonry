@@ -1,32 +1,44 @@
 .masonry {
-  --max-w: 800px;
-  --gap: 16;
+  ---gap: 16;
+  ---col-width: 240px;
   --row: 20;
-  --gap-px: calc(var(--gap) * 1px);
-  --col: calc(var(--max-w) / 3);
+  --gap-px: calc(var(---gap) * 1px);
   --row-px: calc(var(--row) * 1px);
 
-  display: grid;
-  max-width: var(--max-w);
-  margin: 0 auto;
-
+  display: flex;
+  flex-direction: column;
   gap: var(--gap-px);
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(calc(var(--col) - var(--gap-px)), 1fr)
-  );
-  grid-auto-rows: var(--row-px);
+}
+
+@media (min-width: 520px) {
+  .masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(---col-width), 1fr));
+    grid-auto-rows: var(--row-px);
+  }
 }
 
 .masonry__item {
-  --row-end: calc(var(--h) / (var(--row) + var(--gap)));
+  /*
+   * The height of the columns is based on the number of rows it occupies.
+   * We calculate the columns needed by dividing the height of the image
+   * by the height of the row plus the margin.
+   * `--h` is the height of the image that you provide using the style attribute.
+   */
+  --row-end: calc(var(--h) / (var(--row) + var(---gap)));
+
   grid-row-end: span var(--row-end, 1);
   overflow: hidden;
-  box-shadow: 0 0 4px 0 #e0e0e0;
 }
 
 .masonry__item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+}
+
+@media (min-width: 520px) {
+  .masonry__item img {
+    height: 100%;
+    object-fit: cover;
+  }
 }

@@ -2,7 +2,13 @@
 @import url("./masonry.css");
 
 body {
-  padding: 24px;
+  padding: 0 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 h3 {
@@ -11,4 +17,8 @@ h3 {
   text-align: center;
   color: #aaa;
   margin: 5rem 2rem 4rem;
+}
+
+.masonry__item {
+  box-shadow: 0 0 4px 0 #e0e0e0;
 }
