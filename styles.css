@@ -1,8 +1,36 @@
-@import url("./normalize.css");
-@import url("./masonry.css");
+@import url('./normalize.css');
+@import url('./masonry.css');
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
   padding: 0 24px;
+  color: #aaa;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+ol,
+ul {
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+
+li {
+  margin: 0 0 0.5rem 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -11,11 +39,10 @@ body {
   margin-left: auto;
 }
 
-h3 {
+h1 {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  color: #aaa;
   margin: 5rem 2rem 4rem;
 }
 
