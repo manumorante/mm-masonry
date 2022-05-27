@@ -1,0 +1,24 @@
+{
+  "name": "mm-masonry",
+  "version": "1.0.0",
+  "description": "Pure CSS Masonry like photo gallery",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manumorante/mm-masonry.git"
+  },
+  "keywords": [
+    "masonry",
+    "photo-grallery",
+    "pure-css"
+  ],
+  "author": "Manu Morante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manumorante/mm-masonry/issues"
+  },
+  "homepage": "https://masonry.manumorante.com"
+}
