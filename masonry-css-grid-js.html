@@ -13,70 +13,70 @@
 
       <div class="masonry js-masonry">
         <div class="masonry__item">
-          <img src="https://picsum.photos/501/400" />
+          <img class="masonry__img" src="https://picsum.photos/501/400" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/301/350" />
+          <img class="masonry__img" src="https://picsum.photos/301/350" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/501/450" />
+          <img class="masonry__img" src="https://picsum.photos/501/450" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/201/300" />
+          <img class="masonry__img" src="https://picsum.photos/201/300" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/401/200" />
+          <img class="masonry__img" src="https://picsum.photos/401/200" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/401/450" />
+          <img class="masonry__img" src="https://picsum.photos/401/450" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/301/650" />
+          <img class="masonry__img" src="https://picsum.photos/301/650" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/351/350" />
+          <img class="masonry__img" src="https://picsum.photos/351/350" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/301/450" />
+          <img class="masonry__img" src="https://picsum.photos/301/450" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/201/400" />
+          <img class="masonry__img" src="https://picsum.photos/201/400" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/301/200" />
+          <img class="masonry__img" src="https://picsum.photos/301/200" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/501/400" />
+          <img class="masonry__img" src="https://picsum.photos/501/400" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/301/350" />
+          <img class="masonry__img" src="https://picsum.photos/301/350" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/501/450" />
+          <img class="masonry__img" src="https://picsum.photos/501/450" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/201/300" />
+          <img class="masonry__img" src="https://picsum.photos/201/300" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/401/200" />
+          <img class="masonry__img" src="https://picsum.photos/401/200" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/401/450" />
+          <img class="masonry__img" src="https://picsum.photos/401/450" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/301/650" />
+          <img class="masonry__img" src="https://picsum.photos/301/650" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/351/350" />
+          <img class="masonry__img" src="https://picsum.photos/351/350" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/301/450" />
+          <img class="masonry__img" src="https://picsum.photos/301/450" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/201/400" />
+          <img class="masonry__img" src="https://picsum.photos/201/400" />
         </div>
         <div class="masonry__item">
-          <img src="https://picsum.photos/301/200" />
+          <img class="masonry__img" src="https://picsum.photos/301/200" />
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
       const items = document.querySelectorAll('.js-masonry .masonry__item')
 
       items.forEach((item) => {
-        const img = item.querySelector('img')
+        const img = item.querySelector('.masonry__img')
         img.addEventListener('load', () => {
           item.style.setProperty('--w', img.naturalWidth)
           item.style.setProperty('--h', img.naturalHeight)

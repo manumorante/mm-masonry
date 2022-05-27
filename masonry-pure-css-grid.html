@@ -11,74 +11,99 @@
     <div class="container">
       <h1>Pure CSS Masonry Layout with Grid</h1>
 
-      <div class="masonry">
+      <div class="controls">
+        <label for="column">
+          Column:
+          <input type="range" name="column" id="column" min="50" max="500" />
+        </label>
+
+        <label for="gap">
+          Gap: <input type="range" name="gap" id="gap" min="0" max="50" />
+        </label>
+      </div>
+
+      <div class="masonry" id="masonry">
         <div class="masonry__item" style="--w: 500; --h: 400">
-          <img src="https://picsum.photos/500/400" />
+          <img class="masonry__img" src="https://picsum.photos/500/400" />
         </div>
         <div class="masonry__item" style="--w: 300; --h: 350">
-          <img src="https://picsum.photos/300/350" />
+          <img class="masonry__img" src="https://picsum.photos/300/350" />
         </div>
         <div class="masonry__item" style="--w: 500; --h: 450">
-          <img src="https://picsum.photos/500/450" />
+          <img class="masonry__img" src="https://picsum.photos/500/450" />
         </div>
         <div class="masonry__item" style="--w: 200; --h: 300">
-          <img src="https://picsum.photos/200/300" />
+          <img class="masonry__img" src="https://picsum.photos/200/300" />
         </div>
         <div class="masonry__item" style="--w: 400; --h: 200">
-          <img src="https://picsum.photos/400/200" />
+          <img class="masonry__img" src="https://picsum.photos/400/200" />
         </div>
         <div class="masonry__item" style="--w: 400; --h: 450">
-          <img src="https://picsum.photos/400/450" />
+          <img class="masonry__img" src="https://picsum.photos/400/450" />
         </div>
         <div class="masonry__item" style="--w: 300; --h: 650">
-          <img src="https://picsum.photos/300/650" />
+          <img class="masonry__img" src="https://picsum.photos/300/650" />
         </div>
         <div class="masonry__item" style="--w: 350; --h: 350">
-          <img src="https://picsum.photos/350/350" />
+          <img class="masonry__img" src="https://picsum.photos/350/350" />
         </div>
         <div class="masonry__item" style="--w: 300; --h: 450">
-          <img src="https://picsum.photos/300/450" />
+          <img class="masonry__img" src="https://picsum.photos/300/450" />
         </div>
         <div class="masonry__item" style="--w: 200; --h: 400">
-          <img src="https://picsum.photos/200/400" />
+          <img class="masonry__img" src="https://picsum.photos/200/400" />
         </div>
         <div class="masonry__item" style="--w: 300; --h: 200">
-          <img src="https://picsum.photos/300/200" />
+          <img class="masonry__img" src="https://picsum.photos/300/200" />
         </div>
         <div class="masonry__item" style="--w: 500; --h: 400">
-          <img src="https://picsum.photos/500/400" />
+          <img class="masonry__img" src="https://picsum.photos/500/400" />
         </div>
         <div class="masonry__item" style="--w: 300; --h: 350">
-          <img src="https://picsum.photos/300/350" />
+          <img class="masonry__img" src="https://picsum.photos/300/350" />
         </div>
         <div class="masonry__item" style="--w: 500; --h: 450">
-          <img src="https://picsum.photos/500/450" />
+          <img class="masonry__img" src="https://picsum.photos/500/450" />
         </div>
         <div class="masonry__item" style="--w: 200; --h: 300">
-          <img src="https://picsum.photos/200/300" />
+          <img class="masonry__img" src="https://picsum.photos/200/300" />
         </div>
         <div class="masonry__item" style="--w: 400; --h: 200">
-          <img src="https://picsum.photos/400/200" />
+          <img class="masonry__img" src="https://picsum.photos/400/200" />
         </div>
         <div class="masonry__item" style="--w: 400; --h: 450">
-          <img src="https://picsum.photos/400/450" />
+          <img class="masonry__img" src="https://picsum.photos/400/450" />
         </div>
         <div class="masonry__item" style="--w: 300; --h: 650">
-          <img src="https://picsum.photos/300/650" />
+          <img class="masonry__img" src="https://picsum.photos/300/650" />
         </div>
         <div class="masonry__item" style="--w: 350; --h: 350">
-          <img src="https://picsum.photos/350/350" />
+          <img class="masonry__img" src="https://picsum.photos/350/350" />
         </div>
         <div class="masonry__item" style="--w: 300; --h: 450">
-          <img src="https://picsum.photos/300/450" />
+          <img class="masonry__img" src="https://picsum.photos/300/450" />
         </div>
         <div class="masonry__item" style="--w: 200; --h: 400">
-          <img src="https://picsum.photos/200/400" />
+          <img class="masonry__img" src="https://picsum.photos/200/400" />
         </div>
         <div class="masonry__item" style="--w: 300; --h: 200">
-          <img src="https://picsum.photos/300/200" />
+          <img class="masonry__img" src="https://picsum.photos/300/200" />
         </div>
       </div>
+
+      <script>
+        var masonry = document.getElementById('masonry')
+        var column = document.getElementById('column')
+        var gap = document.getElementById('gap')
+
+        column.addEventListener('input', () => {
+          masonry.style.setProperty('--column', column.value)
+        })
+
+        gap.addEventListener('input', () => {
+          masonry.style.setProperty('--gap', gap.value)
+        })
+      </script>
     </div>
   </body>
 </html>

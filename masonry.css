@@ -1,56 +1,40 @@
 .masonry {
   --column: 240;
-  --row: 10;
-  --gap: 16;
+  --gap: 8;
 
   /* Values with PX*/
-  --column-px: var(--column) * 1px;
-  --row-px: var(--row) * 1px;
+  --column-px: calc(var(--column) * 1px);
+  --gap-px: calc(var(--gap) * 1px);
+}
 
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--gap) * 1px);
+.masonry__item {
+  margin-bottom: var(--gap-px);
+}
+
+.masonry__img {
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 520px) {
   .masonry {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(calc(var(--column-px)), 1fr)
-    );
-    grid-auto-rows: calc(var(--row-px));
+    grid-template-columns: repeat(auto-fill, minmax(var(--column-px), 1fr));
+    grid-auto-rows: 1;
+    column-gap: var(--gap-px);
   }
 
-  .masonry__item img {
+  .masonry__item {
+    /* Calculate the image height according to the column width and the iamge aspect ratio.
+      [Image-Height] * [Column-Width] / [Image-Width] = [X] */
+    --img-proportional-height: calc(var(--h) * var(--column) / (var(--w)));
+
+    grid-row-end: span var(--img-proportional-height, 240);
+    overflow: hidden;
+  }
+
+  .masonry__img {
     height: 100%;
     object-fit: cover;
   }
-}
-
-.masonry__item {
-  /*
-    Calculate the image height according to the column width and the iamge aspect ratio.
-    Image-Width  --> Image-Height
-    Column-Width --> X
-    
-    [Image-Height] * [Column-Width] / [Image-Width] = [X]
-  */
-  --img-proportional-height: calc(
-    var(--h) * var(--column) / (var(--w) + var(--gap))
-  );
-
-  /*
-    Column height is based on the number of rows it occupies.
-    We calculate them by dividing the new image height by the row plus the gap.
-  */
-  --grid-row-end: var(--img-proportional-height) / (var(--row) + var(--gap));
-
-  grid-row-end: span calc(var(--grid-row-end, 24));
-  overflow: hidden;
-}
-
-.masonry__item img {
-  width: 100%;
-  height: auto;
 }
