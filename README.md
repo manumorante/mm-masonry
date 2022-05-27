@@ -17,14 +17,20 @@ Simple configuration of column width and gap.
 
 # Demos
 
-**CSS Grid custom props**
-Apply custom props via inline styles
+### 🥇 CSS Grid custom props
+
+Apply custom props via inline styles.
+
 [Demo](https://masonry.manumorante.com/web/01-css-grid-custom-props.html)
 
-**CSS Grid + image load event**
-Set image dimensions when `onload` event in Javascript
+### 🥈 CSS Grid + image load event
+
+Set image dimensions when `onload` event in Javascript.
+
 [Demo](https://masonry.manumorante.com/web/02-css-grid-js-load.html)
 
-**CSS columns**
-The simplest way: with CSS Columns
+### 🥉 CSS columns
+
+The simplest way: with CSS Columns.
+
 [Demo](https://masonry.manumorante.com/web/03-css-colums.html)
