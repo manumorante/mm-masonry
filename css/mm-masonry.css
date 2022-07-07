@@ -9,7 +9,7 @@
   --gap-px: calc(var(--mm-masonry-gap) * 1px);
 }
 
-.mm-masonry__item {
+.mm-masonry__item:not(:last-child) {
   margin-bottom: var(--gap-px);
 }
 
