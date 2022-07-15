@@ -1,6 +1,6 @@
 {
   "name": "mm-masonry",
-  "version": "1.0.2",
+  "version": "1.0.8",
   "description": "Pure CSS Masonry like photo gallery",
   "main": "index.html",
   "scripts": {

@@ -14,7 +14,7 @@
       <div class="controls">
         <label for="column">
           Column:
-          <input type="range" name="column" id="column" min="50" max="500" />
+          <input type="range" name="column" id="column" min="50" max="500" value="280" />
         </label>
 
         <label for="gap">
@@ -22,7 +22,18 @@
         </label>
       </div>
 
-      <div class="mm-masonry" id="mm-masonry">
+      <!--
+        
+        You can apply some aditional config with style and custom-props:
+
+        To disble the Masonry:
+        style="--_display: block"
+
+        To change default col width and column gap:
+        style="--_col-width: 280; --_gap: 20"
+        
+      -->
+      <div class="mm-masonry js-mm-masonry" style="--_col-width: 280; --_gap: 20">
         <div class="mm-masonry__item" style="--w: 500; --h: 400">
           <img class="mm-masonry__img" src="https://picsum.photos/500/400" />
         </div>
@@ -92,18 +103,16 @@
       </div>
 
       <script>
+        var masonry = document.querySelector('.js-mm-masonry')
         var column = document.getElementById('column')
         var gap = document.getElementById('gap')
 
         column.addEventListener('input', () => {
-          document.documentElement.style.setProperty(
-            '--mm-masonry-col-width',
-            column.value
-          )
+          masonry.style.setProperty('--_col-width', column.value)
         })
 
         gap.addEventListener('input', () => {
-          document.documentElement.style.setProperty('--mm-masonry-gap', gap.value)
+          masonry.style.setProperty('--_gap', gap.value)
         })
       </script>
     </div>
