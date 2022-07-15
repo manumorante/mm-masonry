@@ -1,5 +1,3 @@
-@import url('../css/mm-masonry.css');
-
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -8,28 +6,14 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
   padding: 0 24px;
   color: #aaa;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-ol,
-ul {
-  margin: 0 0 0 1rem;
-  padding: 0;
-}
-
-li {
-  margin: 0 0 0.5rem 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+  text-align: center;
 }
 
 .container {
@@ -39,14 +23,10 @@ img {
 }
 
 h1 {
+  margin: 5rem 2rem 4rem;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
-  margin: 5rem 2rem 4rem;
-}
-
-.masonry__item {
-  box-shadow: 0 0 4px 0 #e0e0e0;
 }
 
 .controls {

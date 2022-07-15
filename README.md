@@ -2,33 +2,48 @@
 
 ![image](https://user-images.githubusercontent.com/3266486/170789547-9fcfa677-01b0-4347-9d6a-941cc34efd21.png)
 
-### Options
+## Demo
 
-Simple configuration of column width and gap.
+[Demo: CSS Grid + custom props](https://masonry.manumorante.com/web/01-css-grid-custom-props.html)
+
+## Config the **column width** and **gap**
+
+Using css selector:
 
 ```css
-:root {
-  --mm-masonry-col-width: 240;
-  --mm-masonry-gap: 8;
+.mm-masonry {
+  --_col-width: 240;
+  --_gap: 8;
 }
 ```
 
-# Demos
+Or directly in the html tag:
 
-### 🥇 CSS Grid custom props
+```html
+<div class="mm-masonry" style="--_gap: 20">...</div>
+```
 
-Apply custom props via inline styles.
+## Disable option
 
-[Demo](https://masonry.manumorante.com/web/01-css-grid-custom-props.html)
+You can control the disable option by using the following css selector:
 
-### 🥈 CSS Grid + image load event
+```css
+.mm-masonry {
+  --_display: block; /* unset | flex | ...*/
+  --_gap: 0; /* Or a value */
+}
+```
+
+## Using some JavaScript
+
+**CSS Grid + image load event**
 
 Set image dimensions when `onload` event in Javascript.
 
-[Demo](https://masonry.manumorante.com/web/02-css-grid-js-load.html)
+[Demo: CSS Grid + image load event](https://masonry.manumorante.com/web/02-css-grid-js-load.html)
 
-### 🥉 CSS columns
+## CSS columns
 
 The simplest way: with CSS Columns.
 
-[Demo](https://masonry.manumorante.com/web/03-css-colums.html)
+[Demo: CSS columns](https://masonry.manumorante.com/web/03-css-colums.html)

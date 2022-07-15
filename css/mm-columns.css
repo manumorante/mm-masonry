@@ -1,0 +1,17 @@
+.mm-columns {
+  --col-width: var(--_col-width, 280px);
+  --columns: var(--_columns, 5);
+  --gap: var(--_gap, 20px);
+
+  columns: var(--col-width) var(--columns);
+  column-gap: var(--gap);
+}
+
+.mm-columns__item:not(:last-child) {
+  margin-bottom: var(--gap);
+}
+
+.mm-columns__img {
+  width: 100%;
+  height: auto;
+}
