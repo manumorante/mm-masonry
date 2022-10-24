@@ -1,5 +1,5 @@
 {
-  "name": "@manumorante/masonry",
+  "name": "mm-masonry",
   "version": "1.0.9",
   "description": "Pure CSS Masonry like photo gallery",
   "main": "index.html",
