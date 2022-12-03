@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <h1>
-        <a href="/">MM Masonry Photo Gallery</a>
+        <a href="../">MM Masonry Photo Gallery</a>
       </h1>
 
       <h2>Pure CSS Masonry Layout with Grid</h2>
@@ -35,10 +35,10 @@
         style="--_display: block"
 
         To change default col width and column gap:
-        style="--_col-width: 280; --_gap: 20"
+        style="--col-width: 280; --gap: 20"
         
       -->
-      <div class="mm-masonry js-mm-masonry" style="--_col-width: 280; --_gap: 20">
+      <div class="mm-masonry js-mm-masonry" style="--col-width: 280; --gap: 20">
         <div class="mm-masonry__item" style="--w: 500; --h: 400">
           <img class="mm-masonry__img" src="https://picsum.photos/500/400?random=1" />
         </div>
@@ -113,11 +113,11 @@
         var gap = document.getElementById('gap')
 
         column.addEventListener('input', () => {
-          masonry.style.setProperty('--_col-width', column.value)
+          masonry.style.setProperty('--col-width', column.value)
         })
 
         gap.addEventListener('input', () => {
-          masonry.style.setProperty('--_gap', gap.value)
+          masonry.style.setProperty('--gap', gap.value)
         })
       </script>
     </div>
