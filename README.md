@@ -1,6 +1,10 @@
-# MM Masonry Photo Gallery
+# Masonry Photo Gallery
 
 ![image](https://user-images.githubusercontent.com/3266486/170789547-9fcfa677-01b0-4347-9d6a-941cc34efd21.png)
+
+## NPM package
+
+[npmjs.com/package/mm-masonry](https://www.npmjs.com/package/mm-masonry)
 
 ## Demo
 
